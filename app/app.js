@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const router = require('../routes/routes');
 
 app.use(express.urlencoded({extended: true}));
 
@@ -25,6 +26,8 @@ app.engine('ejs', require('ejs').__express);
 app.use(express.static('public'));
 app.use(express.static('views'));
 
+app.use("/", router);
+
 //Error Handling Middleware
 app.use((req,res,next) => {
     const error = new Error('NOT FOUND!!!');
@@ -39,6 +42,9 @@ app.use((error,req,res,next) =>{
             status: error.status
         },
     });
-})
+});
+
+module.exports = app;
+
 
 
