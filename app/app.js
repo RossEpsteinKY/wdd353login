@@ -19,7 +19,7 @@ app.use((req,res,next)=>{
 });
 
 //EJS Middleware
-app.set('view-engine', 'ejs');
+app.set('view engine', 'ejs');
 app.engine('ejs', require('ejs').__express);
 
 //Static site middleware

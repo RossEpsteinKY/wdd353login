@@ -7,4 +7,16 @@ router.get('/', (req,res) =>{
         });
 });
 
+router.get('/about', (req,res) =>{
+    res.render('about',{
+        pagename: "About"
+    });
+});
+
+router.get('/portfolio', (req,res) =>{
+    res.render('portfolio',{
+        pagename: "Portfolio"
+    });
+});
+
 module.exports = router;
