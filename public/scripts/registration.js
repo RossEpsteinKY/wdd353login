@@ -48,7 +48,7 @@ exports.checkForm = function (req) {
   console.log('hits');
   if(req.body.firstName.length == 0){
       errors.firstName.error = true;
-      console.log('tacos');
+
   }else {
       console.log(req.body.firstName);
   }

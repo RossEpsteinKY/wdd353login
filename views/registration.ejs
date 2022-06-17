@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="/css/styles.css" rel="stylesheet" />
-    <script src="../public/scripts/registration"></script>
+    <script src="/scripts/registration"></script>
 </head>
 <body id="page-top">
 <!-- Navigation-->
@@ -42,8 +42,10 @@
                 <div class="formbuilder-text form-group field-firstName">
                     <label for="firstName" class="formbuilder-text-label">First Name<span class="formbuilder-required">*</span></label>
                     <input type="text" placeholder="Enter first name" class="form-control" name="firstName" access="false" id="firstName" aria-required="true">
-                    <% if(errors.firstName.errorMsg == true){ %>
-                    <span> <% errors.firstName.errorMsg%>  </span>
+
+                    <% if (typeof error !== "undefined") { %>
+                        <p>Form could not be submitted due to the following error:</p>
+                        <p><%= errors.firstName.errorMsg %></p>
                     <% } %>
                 </div>
                 <div class="formbuilder-text form-group field-lastName">
