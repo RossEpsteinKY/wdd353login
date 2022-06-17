@@ -30,19 +30,20 @@ app.use("/", router);
 
 //Error Handling Middleware
 app.use((req,res,next) => {
-    const error = new Error('NOT FOUND!!!');
+    const error = new Error('Not found!');
     error.status(404);
     next(error);
 });
 
-app.use((error,req,res,next) =>{
+app.use((error, req, res, next) =>{
     res.status(error.status || 500).json({
         error: {
             message: error.message,
-            status: error.status
-        },
+            status: error.status,
+        }
     });
 });
+
 
 module.exports = app;
 

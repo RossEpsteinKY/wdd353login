@@ -1,6 +1,6 @@
 let errors = {
   firstName: {
-    error: true,
+    status: "failed",
     errorMsg: "First name is required"
   },
   lastName: {
@@ -37,20 +37,5 @@ let errors = {
   }
 }
 
-
-function checkForm() {
-   // The function returns the product of p1 and p2
-}
-
-exports.checkForm = function (req) {
-  console.log("CLICK");
-  console.log(req.body.firstName);
-  console.log('hits');
-  if(req.body.firstName.length == 0){
-      errors.firstName.error = true;
-
-  }else {
-      console.log(req.body.firstName);
-  }
-}
+errors.firstNameMsg = "First name is required";
 

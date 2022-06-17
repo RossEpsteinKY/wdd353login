@@ -28,8 +28,8 @@ router.get('/registration', (req,res) =>{
 
 router.post('/registration', (req,res) =>{
 
-    var registrationCheck = require("../public/scripts/registration");
-    registrationCheck.checkForm(req);
+    // var registrationCheck = require("../public/scripts/registration");
+    // registrationCheck.checkForm(req);
 
     // console.log('hits');
     // if(req.body.firstName == ''){
