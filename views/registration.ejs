@@ -43,7 +43,83 @@
 <!-- Contact Section-->
 <section class="page-section portfolio" id="portfolio">
     <div class="container">
+        <form>
+            <hr>
 
+            <div class="rendered-form">
+                <div class="formbuilder-text form-group field-firstName">
+                    <label for="firstName" class="formbuilder-text-label">First Name<span class="formbuilder-required">*</span></label>
+                    <input type="text" placeholder="Enter first name" class="form-control" name="firstName" access="false" id="firstName" required="required" aria-required="true">
+                </div>
+                <div class="formbuilder-text form-group field-lastName">
+                    <label for="lastName" class="formbuilder-text-label">Last Name<span class="formbuilder-required">*</span></label>
+                    <input type="text" placeholder="Enter last name" class="form-control" name="lastName" access="false" id="lastName" required="required" aria-required="true">
+                </div>
+                <div class="formbuilder-text form-group field-city">
+                    <label for="city" class="formbuilder-text-label">City<span class="formbuilder-required">*</span></label>
+                    <input type="text" placeholder="Enter city" class="form-control" name="city" access="false" id="city" required="required" aria-required="true">
+                </div>
+                <div class="formbuilder-text form-group field-state">
+                    <label for="state" class="formbuilder-text-label">State<span class="formbuilder-required">*</span></label>
+                    <input type="text" placeholder="Enter state" class="form-control" name="state" access="false" id="state" required="required" aria-required="true">
+                </div>
+                <div class="formbuilder-text form-group field-zipCode">
+                    <label for="zipCode" class="formbuilder-text-label">Zip Code<span class="formbuilder-required">*</span></label>
+                    <input type="text" placeholder="Enter zip code" class="form-control" name="zipCode" access="false" id="zipCode" required="required" aria-required="true">
+                </div>
+                <div class="formbuilder-select form-group field-age">
+                    <label for="age" class="formbuilder-select-label">Age<span class="formbuilder-required">*</span></label>
+                    <select class="form-control" name="age" id="age" required="required" aria-required="true">
+                        <option value="0" selected="true" id="age-0">Select One</option>
+                        <option value="1" id="age-1">18 to 30</option>
+                        <option value="2" id="age-2">30 to 50</option>
+                        <option value="3" id="age-3">Over 50</option>
+                    </select>
+                </div>
+                <div class="formbuilder-radio-group form-group field-radio-group-1655469595576">
+                    <label for="radio-group-1655469595576" class="formbuilder-radio-group-label">Select Gender<span class="formbuilder-required">*</span></label>
+                    <div class="radio-group">
+                        <div class="formbuilder-radio">
+                            <input name="radio-group-1655469595576" access="false" id="radio-group-1655469595576-0" required="required" aria-required="true" value="0" type="radio">
+                            <label for="radio-group-1655469595576-0">Select One</label>
+                        </div>
+                        <div class="formbuilder-radio">
+                            <input name="radio-group-1655469595576" access="false" id="radio-group-1655469595576-1" required="required" aria-required="true" value="1" type="radio">
+                            <label for="radio-group-1655469595576-1">Male</label>
+                        </div>
+                        <div class="formbuilder-radio">
+                            <input name="radio-group-1655469595576" access="false" id="radio-group-1655469595576-2" required="required" aria-required="true" value="2" type="radio">
+                            <label for="radio-group-1655469595576-2">Female</label>
+                        </div>
+                        <div class="formbuilder-radio">
+                            <input name="radio-group-1655469595576" access="false" id="radio-group-1655469595576-3" required="required" aria-required="true" value="3" type="radio">
+                            <label for="radio-group-1655469595576-3">Non-Binary</label>
+                        </div>
+                        <div class="formbuilder-radio">
+                            <input name="radio-group-1655469595576" access="false" id="radio-group-1655469595576-4" required="required" aria-required="true" type="radio">
+                            <label for="radio-group-1655469595576-4">Prefer Not To Say</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="formbuilder-checkbox-group form-group field-acceptTerms">
+                    <label for="acceptTerms" class="formbuilder-checkbox-group-label">Accept Terms<span class="formbuilder-required">*</span></label>
+                    <div class="checkbox-group">
+                        <div class="formbuilder-checkbox">
+                            <input name="acceptTerms[]" access="false" id="acceptTerms-0" required="required" aria-required="true" value="1" type="checkbox">
+                            <label for="acceptTerms-0">I Accept The Terms Of This Form</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="formbuilder-textarea form-group field-bio">
+                    <label for="bio" class="formbuilder-textarea-label">Bio<span class="formbuilder-required">*</span></label>
+                    <textarea type="textarea" placeholder="Enter something about yourself" class="form-control" name="bio" access="false" id="bio" required="required" aria-required="true"></textarea>
+                </div>
+                <div class="formbuilder-button form-group field-submit">
+                    <button type="submit" class="btn-success btn" name="submit" access="false" style="success" id="submit">Submit</button>
+                </div>
+            </div>
+
+        </form>
     </div>
 </section>
 <!-- Footer-->
