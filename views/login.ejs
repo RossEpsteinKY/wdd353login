@@ -26,7 +26,7 @@
         <!-- Masthead Avatar Image-->
 
         <!-- Masthead Heading-->
-        <h1 class="masthead-heading text-uppercase mb-0">Registration</h1>
+        <h1 class="masthead-heading text-uppercase mb-0">Login</h1>
         <!-- Icon Divider-->
 
         <!-- Masthead Subheading-->
@@ -56,7 +56,7 @@
 <!--                    <% } %>-->
                 </div>
                 <div class="formbuilder-button form-group">
-                    <a onClick = "submitLogin()">
+                    <a onClick = "submitLogin(event)">
                     <button class="btn-success btn" name="submit" access="false" style="success" id="submit"
                     >Submit</button></a>
                 </div>
@@ -72,8 +72,11 @@
 <!-- Bootstrap core JS-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-    function submitLogin(){
-        alert('test');
+    function submitLogin(event){
+        var userNameEntered = document.getElementById("userName").value;
+        var passwordEntered = document.getElementById("password").value;
+
+        alert(userNameEntered + "  " + passwordEntered);
     }
 </script>
 <!-- Core theme JS-->
