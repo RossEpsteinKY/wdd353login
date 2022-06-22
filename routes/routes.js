@@ -20,6 +20,12 @@ router.get('/portfolio', (req,res) =>{
     });
 });
 
+router.get('/login', (req,res) =>{
+    res.render('login',{
+        pagename: "Login"
+    });
+});
+
 router.get('/registration', (req,res) =>{
     res.render('registration',{
         pagename: "Registration"
