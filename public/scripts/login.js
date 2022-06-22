@@ -11,7 +11,7 @@ let errors = {
 
 let loginInfo = {
     username: 'Mike@aol.com',
-    Password: 'abc123'
+    password: 'abc123'
 }
 
 errors.firstNameMsg = "First name is required";

@@ -40,17 +40,15 @@
 
             <div class="rendered-form">
                 <div class="formbuilder-text form-group field-userName">
+
                     <label for="userName" class="formbuilder-text-label">Username<span class="formbuilder-required">*</span></label>
                     <input type="text" placeholder="Enter Username" class="form-control" name="userName" access="false" id="userName" aria-required="true">
 
-<!--                    <% if (typeof error !== "undefined") { %>-->
-<!--                        <p>Form could not be submitted due to the following error:</p>-->
-<!--                        <p><%= errors.userName.errorMsg %></p>-->
-<!--                    <% } %>-->
+
                 </div>
                 <div class="formbuilder-text form-group field-password">
                     <label for="password" class="formbuilder-text-label">Password<span class="formbuilder-required">*</span></label>
-                    <input type="text" placeholder="Enter Password" class="form-control" name="password" access="false" id="password" aria-required="true">
+                    <input type="password" placeholder="Enter Password" class="form-control" name="password" access="false" id="password" aria-required="true">
 <!--                    <% if(typeof(errors) != "undefined"){ %>-->
 <!--                    <span> <%errors.password.errorMsg%>  </span>-->
 <!--                    <% } %>-->
@@ -72,11 +70,22 @@
 <!-- Bootstrap core JS-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
+    const {router} = require("express/lib/application");
+
     function submitLogin(event){
         var userNameEntered = document.getElementById("userName").value;
         var passwordEntered = document.getElementById("password").value;
 
-        alert(userNameEntered + "  " + passwordEntered);
+        // alert(passwordEntered + " " + userNameEntered);
+        if (userNameEntered !== loginInfo.username || passwordEntered !== loginInfo.password) {
+            alert("Invalid username or password");
+        }else{
+            alert('login successful');
+            router.get('/portfolio');
+
+        }
+
+
     }
 </script>
 <!-- Core theme JS-->
